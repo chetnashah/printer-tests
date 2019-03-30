@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        @media print {
+            @page {
+                margin: 0mm;
+            }
+            html {
+                background-color: #FFFFFF; 
+                margin: 0px;  /* this affects the margin on the html before sending to printer */
+            }
+            /* #Header, #Footer { display: none ! important; } */
+        }
+    </style>
+    <title>PrintTests</title>
+</head>
+<body>
+    Printing PrintTests
+    <h1>Heading 1</h1>
+    <p>Paragraph</p>
+    <button >Print me</button>
+    <script type="text/javascript" src="app.js"></script>
+
+    <button onClick="popuponclick()">print in new window</button>
+     <button onClick="writeInIframeAndPrint()">print Iframe contents without headers/margins</button>
+    
+    <p><span onclick="printPage('externalPage.html');" style="cursor:pointer;text-decoration:underline;color:#0000ff;">Print external page!</span></p>
+
+    <iframe id="print-iframe" style="width: 0; height: 0; border: 0; right: 0; bottom: 0; position: fixed;">
+    </iframe>
+</body>
+</html>
