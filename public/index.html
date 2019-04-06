@@ -30,7 +30,25 @@
     
     <p><span onclick="printPage('externalPage.html');" style="cursor:pointer;text-decoration:underline;color:#0000ff;">Print external page!</span></p>
 
+    <div id="print_button_container"></div>
+
     <iframe id="print-iframe" style="width: 0; height: 0; border: 0; right: 0; bottom: 0; position: fixed;">
     </iframe>
+
+    <button onClick="oauthSignIn()">Do Me Some Google Auth</button>
+
+    <!-- google cloud print start-->
+    <script src="https://www.google.com/cloudprint/client/cpgadget.js">
+</script>
+<script>
+  window.onload = function() {
+    var gadget = new cloudprint.Gadget();
+    gadget.setPrintButton(
+        cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
+gadget.setPrintDocument("url", "Test Page", "https://www.google.com/landing/cloudprint/testpage.pdf");
+
+    }
+</script>
+<!-- google cloud print ends-->
 </body>
 </html>

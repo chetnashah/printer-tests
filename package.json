@@ -1,0 +1,26 @@
+{
+  "name": "@chetnashah/printertests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chetnashah/printer-tests.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chetnashah/printer-tests/issues"
+  },
+  "homepage": "https://github.com/chetnashah/printer-tests#readme",
+  "dependencies": {
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.10"
+  }
+}
